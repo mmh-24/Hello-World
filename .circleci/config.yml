@@ -1,0 +1,13 @@
+jobs:
+  build:
+	docker:
+  	- image: cimg/base:stable
+	steps:
+  	- checkout
+  	- run: echo "Hello, Welcome CircleCI!"
+ 
+workflows:
+  version: 2
+  build_workflow:
+	jobs:
+  	- build
